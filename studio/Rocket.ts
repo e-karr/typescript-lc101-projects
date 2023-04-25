@@ -28,4 +28,12 @@ export class Rocket {
 
         return total;
     }
+
+    canAdd(item: Payload): boolean {
+        if (this.currentMassKg() + item.massKg <= this.totalCapacityKg) {
+            return true;
+        }
+
+        return false;
+    }
 }
