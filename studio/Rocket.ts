@@ -1,5 +1,6 @@
 import { Astronaut } from './Astronaut';
 import { Cargo } from './Cargo';
+import { Payload } from './Payload';
 
 export class Rocket {
     name: string;
@@ -11,4 +12,16 @@ export class Rocket {
         this.name = name;
         this.totalCapacityKg = totalCapacityKg;
     }
+
+    sumMass(items: Payload[]): number {
+        let sum: number = 0;
+        
+        for (let i = 0; i < items.length; i++) {
+            sum += items[i].massKg
+        }
+
+        return sum 
+    }
+
+
 }
