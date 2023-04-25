@@ -23,5 +23,9 @@ export class Rocket {
         return sum 
     }
 
+    currentMassKg(): number {
+        let total: number = this.sumMass(this.cargoItems) + this.sumMass(this.astronauts);
 
+        return total;
+    }
 }
