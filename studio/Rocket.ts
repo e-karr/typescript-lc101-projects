@@ -36,4 +36,13 @@ export class Rocket {
 
         return false;
     }
+
+    addCargo(cargo: Cargo): boolean {
+        if (this.canAdd(cargo)) {
+            this.cargoItems.push(cargo);
+            return true;
+        }
+
+        return false;
+    }
 }
